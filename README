@@ -1,0 +1,9 @@
+Installation:
+
+1. Clone the repo into a web folder
+2. open protected/config/config.php and update the config variables, change the verifyLocation key in the first if statement to make it work in debug mode, otherwise just change the values in the else statement to make it work as in production mode.
+3. run the migrate using php yiic.php migrate and apply all the migrations
+4. import the protected/data/inserts.sql file into the db
+5. make sure you chmod protected/runtime and /assets /uploads to 0775 or 0777
+6. access http://domain.com/admin to access the admin area user/pass is: admin/admin
+7. make sure you change the settings under the settings tab

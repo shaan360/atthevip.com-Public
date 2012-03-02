@@ -1,0 +1,586 @@
+/*body {
+	background: #242424;
+	font: 14px/1.6 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #ccc;
+}
+
+h1 {
+	font: 42px/1.238 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #fff;
+	text-align: center;
+	margin-top: 20px;
+}
+
+h2 {
+	font: normal 28px/1.357 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #eee;
+	text-align: center;
+	margin-bottom: 40px;
+}*/
+
+section {
+	width: 1000px;
+	margin: 60px auto;
+	text-align: center;
+}
+
+.group {
+	display: inline-block;
+	zoom: 1; /* ie7 hack for display:inline-block */
+	*display: inline;
+	margin-right: 40px;
+}
+
+section .group:last-of-type {
+	margin-right: 0;
+}
+
+/* Micro clearfix hack */
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+
+
+.contact-form {
+	width: 420px;
+	text-align: left;
+}
+
+
+/* Form input box style */
+.form-input {
+	display: block;
+	width: 400px;
+	height: 24px;
+	padding: 6px 10px;
+	margin-bottom: 20px;
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #ccc;
+	background: #444;
+	border: 1px solid #222;
+	outline: none;
+	-moz-border-radius:    8px;
+	-webkit-border-radius: 8px;
+	border-radius:         8px;
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+	-moz-transition:    all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	-o-transition:      all 0.4s ease-in-out;
+	-ms-transition:     all 0.4s ease-in-out;
+	transition:         all 0.4s ease-in-out;
+	behavior: url(PIE.htc);
+}
+
+textarea.form-input {
+	width: 400px;
+	height: 200px;
+	overflow: auto;
+}
+
+
+/* Focus style */
+.form-input:focus {
+	border: 1px solid #7fbbf9;
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #7fbbf9;
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #7fbbf9;
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #7fbbf9;
+}
+
+/* Error style */
+.form-input:-moz-ui-invalid {
+	border: 1px solid #e00;
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+}
+
+.form-input.invalid {
+	border: 1px solid #e00;
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+}
+
+/* Placeholder style */
+.nolabel ::-webkit-input-placeholder {
+	color: #888;
+}
+
+.nolabel :-moz-placeholder {
+	color: #888;
+}
+
+
+/* Form submit button */
+.form-btn {
+	padding: 0 15px;
+	height: 30px;
+	font: bold 12px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+	cursor: pointer;
+	border: 1px solid #0d3d6a;
+	outline: none;
+	position: relative;
+	background-color: #1d83e2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#1d83e2), to(#0d3d6a)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #1d83e2, #0d3d6a); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #1d83e2, #0d3d6a); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #1d83e2, #0d3d6a); /* IE10 */
+	background-image:      -o-linear-gradient(top, #1d83e2, #0d3d6a); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #1d83e2, #0d3d6a);
+	-pie-background:          linear-gradient(top, #1d83e2, #0d3d6a); /* IE6-IE9 */
+	-moz-border-radius:    16px;
+	-webkit-border-radius: 16px;
+	border-radius:         16px;
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+	behavior: url(PIE.htc);
+}
+
+.form-btn:active {
+	border: 1px solid #1d83e2;
+	background-color: #0d3d6a;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#0d3d6a), to(#1d83e2)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #0d3d6a, #1d83e2); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #0d3d6a, #1d83e2); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #0d3d6a, #1d83e2); /* IE10 */
+	background-image:      -o-linear-gradient(top, #0d3d6a, #1d83e2); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #0d3d6a, #1d83e2);
+	-pie-background:          linear-gradient(top, #0d3d6a, #1d83e2); /* IE6-IE9 */
+	-moz-box-shadow:    inset 0 0 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	-webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+	box-shadow:         inset 0 0 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+input[type=submit]::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+
+/* Labels */
+label {
+	margin-bottom: 10px;
+	display: block;
+	width: 300px;
+	color: #ccc;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+label span {
+	font-size: 12px;
+	color: #888;
+	font-weight: normal;
+}
+
+
+/***** Frame style *****/
+
+.contact-form.frame {
+	padding: 20px;
+	background-color: #343434;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#343434), to(#141414)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #343434, #141414); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #343434, #141414); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #343434, #141414); /* IE10 */
+	background-image:      -o-linear-gradient(top, #343434, #141414); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #343434, #141414);
+	-pie-background:          linear-gradient(top, #343434, #141414); /* IE6-IE9 */
+	-moz-border-radius:    8px;
+	-webkit-border-radius: 8px;
+	border-radius:         8px;
+	-moz-box-shadow:    0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	box-shadow:         0 1px 2px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	behavior: URL(PIE.htc);
+}
+
+
+
+
+/***** With Top Bar *****/
+
+.contact-form.tbar {
+	padding: 0 20px 20px 20px;
+	background-color: #3c3c3c;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#343434)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #444444, #343434); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #444444, #343434); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #444444, #343434); /* IE10 */
+	background-image:      -o-linear-gradient(top, #444444, #343434); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #444444, #343434);
+	-pie-background:          linear-gradient(top, #444444, #343434); /* IE6-IE9 */
+	behavior: URL(PIE.htc);
+}
+
+.contact-form.tbar h3 {
+	font: normal 18px/1 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #ccc;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7);
+	padding: 20px;
+	margin: 0 -20px 20px -20px;
+	background-color: #343434;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#343434), to(#1b1b1b)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #343434, #1b1b1b); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #343434, #1b1b1b); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #343434, #1b1b1b); /* IE10 */
+	background-image:      -o-linear-gradient(top, #343434, #1b1b1b); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #343434, #1b1b1b);
+	-pie-background:          linear-gradient(top, #343434, #1b1b1b); /* IE6-IE9 */
+	-moz-border-radius:    8px 8px 0 0;
+	-webkit-border-radius: 8px 8px 0 0;
+	border-radius:         8px 8px 0 0;
+	-moz-border-radius:    8px 8px 0 0;
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 1px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 1px rgba(0, 0, 0, 0.7);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 1px rgba(0, 0, 0, 0.7);
+	behavior: url(PIE.htc);
+}
+
+.contact-form.tbar .form-input {
+	background: #545454;
+}
+
+/* Placeholder style */
+.tbar.nolabel ::-webkit-input-placeholder {
+	color: #999;
+}
+
+.tbar.nolabel :-moz-placeholder {
+	color: #999;
+}
+
+
+
+
+/***** Message box on top *****/
+
+.msgtop input.form-input {
+	width: 250px;
+}
+
+.msgtop .form-input {
+	border: 0;
+	background-color: #646464;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#646464), to(#343434)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #646464, #343434); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #646464, #343434); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #646464, #343434); /* IE10 */
+	background-image:      -o-linear-gradient(top, #646464, #343434); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #646464, #343434);
+	-pie-background:          linear-gradient(top, #646464, #343434); /* IE6-IE9 */
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.msgtop textarea {
+	height: 150px;
+}
+
+.msgtop label {
+	padding-left: 25px; 
+}
+
+.msgtop.nolabel .form-input {
+	padding-left: 45px;
+	width: 215px;
+}
+
+.msgtop.nolabel textarea.form-input {
+	width: 365px;
+}
+
+.msgtop.nolabel ::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+.msgtop.nolabel :-moz-placeholder {
+	color: #aaa;
+}
+
+.msgtop .form-input:focus {
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 3px #c0ddfc;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 3px #c0ddfc;
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 3px #c0ddfc;
+}
+
+.msgtop .form-input:-moz-ui-invalid {
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+}
+
+.msgtop.form-input.invalid {
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7), 0 0 3px #e00;
+}
+
+.msgtop.nolabel p {
+	position: relative;
+	z-index: 1;
+}
+
+.msgtop.nolabel p:before, .ie .msgtop.nolabel p .before  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 36px;
+	height: 100%;
+	text-align: center;
+	line-height: 44px;
+	background-color: #4a535c;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#4a535c), to(#1d2024)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #4a535c, #1d2024); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #4a535c, #1d2024); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #4a535c, #1d2024); /* IE10 */
+	background-image:      -o-linear-gradient(top, #4a535c, #1d2024); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #4a535c, #1d2024);	
+	-moz-border-radius:    8px 0 0 8px;
+	-webkit-border-radius: 8px 0 0 8px;
+	border-radius:         8px 0 0 8px;
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.ie .msgtop.nolabel p:before {
+	display: none;
+}
+
+.ie .msgtop.nolabel p .before {
+	z-index: 1;
+	-pie-background: linear-gradient(top, #4a535c, #1d2024); /* IE6 -IE9 */
+	border-radius: 8px 0 0 8px;
+	behavior: url(PIE.htc);
+}
+
+.ie .msgtop.nolabel p .before:before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.msgtop label.message {
+	background: url(pencil.png) 0 center no-repeat;
+}
+
+.msgtop.nolabel p.message:before, .ie .msgtop.nolabel p.message .before:before {
+	content: url(pencil.png);
+	line-height: 162px;
+}
+
+.msgtop label.name {
+	background: url(user.png) 0 center no-repeat;
+}
+
+.msgtop.nolabel p.name:before, .ie .msgtop.nolabel p.name .before:before {
+	content: url(user.png);
+}
+
+.msgtop label.email {
+	background: url(email.png) 0 center no-repeat;
+}
+
+.msgtop.nolabel p.email:before, .ie .msgtop.nolabel p.email .before:before {
+	content: url(email.png);
+}
+
+.msgtop label.subject {
+	background: url(document.png) 0 center no-repeat;
+}
+
+.msgtop.nolabel p.subject:before, .ie .msgtop.nolabel p.subject .before:before {
+	content: url(document.png);
+}
+
+
+
+
+/***** Form in a 3d frame *****/
+
+.contact-form.form3d  {
+	padding: 20px;
+	position: relative;
+	background-color: #414141;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(0, #282828), to(50px, #414141)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #282828 0, #414141 50px); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #282828 0, #414141 50px); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #282828 0, #414141 50px); /* IE10 */
+	background-image:      -o-linear-gradient(top, #282828 0, #414141 50px); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #282828 0, #414141 50px);
+	-pie-background:          linear-gradient(top, #282828 0, #414141 50px); /* IE6-IE9 */
+	-moz-border-radius:    8px;
+	-webkit-border-radius: 8px;
+	border-radius:         8px; 
+	-moz-box-shadow:    1px -1px 0 #666, 2px -2px 0 #444, 3px -3px #666, 4px -4px 0 #444, 5px -5px 0 #666, 6px -6px 0 #444, 7px -7px 0 #666, inset 0 1px 0 rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 1px -1px 0 #666, 2px -2px 0 #444, 3px -3px #666, 4px -4px 0 #444, 5px -5px 0 #666, 6px -6px 0 #444, 7px -7px 0 #666, inset 0 1px 0 rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.7);
+	box-shadow:         1px -1px 0 #666, 2px -2px 0 #444, 3px -3px #666, 4px -4px 0 #444, 5px -5px 0 #666, 6px -6px 0 #444, 7px -7px 0 #666, inset 0 1px 0 rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.7);
+	behavior: url(PIE.htc);
+}
+
+.form3d .form-input {
+	background: #555;
+	border: 1px solid #242424;
+	position: relative;
+}
+
+.form3d.nolabel ::-webkit-input-placeholder {
+	color: #999;
+}
+
+.form3d.nolabel :-moz-placeholder {
+	color: #999;
+}
+
+
+
+
+/***** Form as airmail envelope *****/
+
+.contact-form.envelope {
+	width: 846px;
+	padding: 15px;
+	margin: 0 auto;
+	position: relative;
+	background-color: #bfd1E7;
+	background-image: -webkit-gradient(linear, left top, right bottom, 
+										   color-stop(5%,  #bfd1E7), color-stop(5%,  #ed5737),
+	                                       color-stop(15%, #ed5737), color-stop(15%, #bfd1E7),
+	                                       color-stop(25%, #bfd1E7), color-stop(25%, #2f57b7),
+	                                       color-stop(35%, #2f57b7), color-stop(35%, #bfd1E7),
+	                                       color-stop(45%, #bfd1E7), color-stop(45%, #ed5737),
+	                                       color-stop(55%, #ed5737), color-stop(55%, #bfd1E7),
+	                                       color-stop(65%, #bfd1E7), color-stop(65%, #2f57b7),
+	                                       color-stop(75%, #2f57b7), color-stop(75%, #bfd1E7),
+	                                       color-stop(85%, #bfd1E7), color-stop(85%, #ed5737),
+	                                       color-stop(95%, #ed5737), color-stop(95%, #bfd1E7));
+	background-image: -webkit-repeating-linear-gradient(135deg, #ed5737 0, #ed5737 50px, transparent 50px, transparent 80px, #2f57b7 80px, #2f57b7 130px, transparent 130px, transparent 160px);
+	background-image:    -moz-repeating-linear-gradient(135deg, #ed5737 0, #ed5737 50px, transparent 50px, transparent 80px, #2f57b7 80px, #2f57b7 130px, transparent 130px, transparent 160px);
+	background-image:     -ms-repeating-linear-gradient(135deg, #ed5737 0, #ed5737 50px, transparent 50px, transparent 80px, #2f57b7 80px, #2f57b7 130px, transparent 130px, transparent 160px);
+	background-image:      -o-repeating-linear-gradient(135deg, #ed5737 0, #ed5737 50px, transparent 50px, transparent 80px, #2f57b7 80px, #2f57b7 130px, transparent 130px, transparent 160px);
+	background-image:         repeating-linear-gradient(135deg, #ed5737 0, #ed5737 50px, transparent 50px, transparent 80px, #2f57b7 80px, #2f57b7 130px, transparent 130px, transparent 160px);
+	-pie-background:          linear-gradient(135deg, 
+										   #bfd1E7 5%,  #ed5737 5%,
+	                                       #ed5737 15%, #bfd1E7 15%,
+	                                       #bfd1E7 25%, #2f57b7 25%,
+	                                       #2f57b7 35%, #bfd1E7 35%,
+	                                       #bfd1E7 45%, #ed5737 45%,
+	                                       #ed5737 55%, #bfd1E7 55%,
+	                                       #bfd1E7 65%, #2f57b7 65%,
+	                                       #2f57b7 75%, #bfd1E7 75%,
+	                                       #bfd1E7 85%, #ed5737 85%,
+	                                       #ed5737 95%, #bfd1E7 95%);
+	-moz-box-shadow:    0 14px 7px -12px rgba(0, 0, 0, 0.9);
+	-webkit-box-shadow: 0 14px 7px -12px rgba(0, 0, 0, 0.9);
+	box-shadow:         0 14px 7px -12px rgba(0, 0, 0, 0.9);
+	behavior: url(PIE.htc);
+
+}
+
+.ie .contact-form.envelope {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.contact-form.envelope:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	right: 10px;
+	bottom: 15px;
+	width: 350px;
+	height: 10px;
+	-moz-box-shadow:    0px 15px 15px rgba(0, 0, 0, 0.9);
+	-webkit-box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.9);
+	box-shadow:         0px 15px 15px rgba(0, 0, 0, 0.9);
+	-moz-transform:    rotate(4deg) skew(4deg);
+	-webkit-transform: rotate(4deg) skew(4deg);
+	-o-transform:      rotate(4deg) skew(4deg);
+	-ms-transform:     rotate(4deg) skew(4deg);
+	transform:         rotate(4deg) skew(4deg);
+}
+
+.envelope.nolabel {
+	margin: 40px auto;
+}
+
+.envelope .form-inner {
+	overflow: hidden;
+	padding: 40px 20px;
+	background-color: #bfd1E7;
+}
+
+.envelope .column:first-of-type {
+	float: left;
+	position: relative;
+}
+
+.envelope .column:last-of-type {
+	float: right;
+	margin: 0 0 20px 40px;
+}
+
+.envelope label {
+	color: #333;
+}
+
+.envelope label span {
+	color: #555;
+}
+
+.envelope .form-input {
+	width: 320px;
+	background: #ededed;
+	border: 5px solid #dbdbdb;
+	color: #333;
+	position: relative;
+}
+
+.envelope textarea.form-input {
+	width: 380px; 
+	position: relative;
+	margin-bottom: 0;
+}
+
+.envelope .form-input:focus {
+	-moz-box-shadow:    inset 0 0 1px rgba(0, 0, 0, 0.3), 0 0 3px #0b76e5;
+	-webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3), 0 0 3px #0b76e5;
+	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.3), 0 0 3px #0b76e5;
+}
+
+.envelope.nolabel ::-webkit-input-placeholder {
+	color: #888;
+}
+
+.envelope.nolabel :-moz-placeholder {
+	color: #888;
+}
+
+.envelope .form-btn {
+	clear: both;
+	float: right;
+}
